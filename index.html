@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Testing landing</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="style/slick.css"/>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body class="c-body">
+  <header class="c-header"></header>
+  <main class="c-main">
+
+    <div class="polygon">
+       <svg preserveaspectratio="none" viewbox="0 0 100 100">
+         <defs>
+          <linearGradient id="deep-walls__left-wall-g" x1="1" x2="0" y1="0" y2="0">
+            <stop offset="0%" stop-color="#3f4040"/>
+            <stop offset="100%" stop-color="#7d7e7f"/>
+          </linearGradient>
+          <linearGradient id="deep-walls__right-wall-g" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#3f4040"/>
+            <stop offset="100%" stop-color="#7d7e7f"/>
+          </linearGradient>
+          <linearGradient id="deep-walls__top-wall-g" x1="0" x2="0" y1="1" y2="0">
+            <stop offset="0%" stop-color="#3f4040"/>
+            <stop offset="100%" stop-color="#7d7e7f"/>
+          </linearGradient>
+          <linearGradient id="deep-walls__bottom-wall-g" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#3f4040"/>
+            <stop offset="100%" stop-color="#7d7e7f"/>
+          </linearGradient>
+          <filter id="inset-shadow">
+            <feOffset dx="0" dy="0"></feOffset>
+            <feGaussianBlur stdDeviation="40" result="offset-blur"></feGaussianBlur>
+            <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite>
+            <feFlood flood-color="black" flood-opacity="0.85" result="color"></feFlood>
+            <feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite>
+            <feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite>
+          </filter>
+        </defs>
+         <polygon class="deep-walls__top-wall" points="0,0 100,0 95,10 5,10" opacity="1"></polygon>
+         <polygon class="deep-walls__left-wall" points="0,0 5,10 5,90 0,100" opacity="1"></polygon>
+         <polygon class="deep-walls__bottom-wall" points="0,100 5,90 95,90 100,100" opacity="1"></polygon>
+         <polygon class="deep-walls__right-wall" points="100,0 95,10 95,90 100,100" opacity="1"></polygon>
+         <polygon class="deep-floor" points="5,10 95,10 95,90 5,90" opacity="1"></polygon>
+         <polygon class="deep-shadow" points="0,0 5,55 95,55 100,0" opacity="0.2"></polygon>
+       </svg>
+    </div>
+    <div class="transporter">
+      <div class="transporter__conveyor">
+        <div class="conveyor-card"></div>
+        <div class="conveyor-card"></div>
+        <div class="conveyor-card"></div>
+        <div class="conveyor-card"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="scripts/jquery-3.1.1.min.js"></script>
+  <script src="scripts/slick.min.js"></script>
+  <script src="scripts/common.js"></script>
+</body>
+</html>

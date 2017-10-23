@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.c-body {
+  margin: 0;
+  background-color: #e2e4e5;
+}
+
+.c-header {
+  height: 75px;
+  padding: 0 50px;
+  background-color: #e2e4e5;
+}
+
+.c-main {
+  margin: 0 50px;
+  position: relative;
+  height: 80vh;
+  background-color: #e2e4e5;
+}
+
+.polygon {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+}
+
+.polygon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.deep-walls__left-wall {
+  fill: url(#deep-walls__left-wall-g);
+}
+
+.deep-walls__right-wall {
+  fill: url(#deep-walls__right-wall-g);
+}
+
+.deep-walls__top-wall {
+  fill: url(#deep-walls__top-wall-g);
+}
+
+.deep-walls__bottom-wall {
+  fill: url(#deep-walls__bottom-wall-g);
+}
+
+.deep-floor {
+  fill: #7d7e7f;
+  filter: url(#inset-shadow);
+}
+
+.deep-shadow {
+  fill: black;
+}
+
+.transporter {
+  position: absolute;
+  z-index: 1;
+  padding-top: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid transparent;
+  border-left-color: black;
+  border-right-color: black;
+  width: 95%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.transporter__conveyor {
+  position: relative;
+}
+
+.conveyor-card {
+  width: 450px;
+  height: 350px;
+  background-color: grey;
+  box-shadow: 0 25px 50px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px 25px 65px;
+}
